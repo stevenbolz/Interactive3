@@ -32,49 +32,6 @@ function pinned_nav() {
 
 $(window).scroll(pinned_nav);
 
-
-/*-------------------------------------
-| Chosen One State
--------------------------------------*/
-function chosen_one() {
-	var sect1_top = $('#sect1').offset().top - nav_height;
-	var sect2_top = $('#sect2').offset().top - nav_height;
-	var sect3_top = $('#sect3').offset().top - nav_height;
-	var sect4_top = $('#sect4').offset().top - nav_height;
-	var sect5_top = $('#sect5').offset().top - nav_height;
-
-	// how far scrolled from top
-	var howFar = $(window).scrollTop();
-
-
-	$('#mainmenu a').removeClass('chosen'); //blanket removal
-
-	if (howFar < sect2_top)
-	{
-		$('#mainmenu a:eq(0)').addClass('chosen');
-	}
-	else if (howFar >= sect2_top && howFar < sect3_top)
-	{
-		$('#mainmenu a:eq(1)').addClass('chosen');
-	}
-	else if (howFar >= sect3_top && howFar < sect4_top)
-	{
-		$('#mainmenu a:eq(2)').addClass('chosen');
-	}
-	else if (howFar >= sect4_top && howFar < sect5_top)
-	{
-		$('#mainmenu a:eq(3)').addClass('chosen');
-	}
-	else if (howFar >= sect5_top)
-	{
-		$('#mainmenu a:eq(4)').addClass('chosen');
-	}
-
-}
-chosen_one(); //when page first loads
-$(window).scroll(chosen_one); 
-$(window).resize(chosen_one);
-
 /*-------------------------------------
 | Animated Scroll
 -------------------------------------*/
@@ -182,4 +139,143 @@ $('#dark .close').click(light_off);
 $('#dark').click(light_off);
 
 
+// THIS IS A TEST OF SWITCHES AND IF ELSE//
+// var answer ="Allie"
+// switch (answer) {
+//   case "yes":
+//     console.log("Yes, Allie is my dog.");
+//     break;
+//   case "no":
+//     console.log("Well, too bad.");
+//     break;
+//   case "maybe":
+//     console.log("Ok, how do you not know?");
+//     break;
+// }
 
+// $ (document ) .ready(function(){
+
+
+// var val = Allie("I am a Lab");
+
+// switch (answer) {
+//   case "yes":
+//     console.log("Yes, Allie is my dog.");
+//     break;
+//   case "no":
+//     console.log("Well, too bad.");
+//     break;
+//   case "maybe":
+//     console.log("Ok, how do you not know?");
+//     break;
+// }
+
+// });
+
+// switch (answer) {
+//   case "yes":
+//     console.log("Yes, Allie is my dog.");
+//     break;
+//   case "no":
+//     console.log("Well, too bad.");
+//     break;
+//   default:
+//     console.log("Ok, how do you not know?");
+// }
+
+										// THIS IS ANOTHER TEST//
+
+$ (document ) .ready(function(){
+
+function isEqual(dog,cat){
+  if (dog === cat) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function myFun() {
+  console.log("yes she is a dog");
+  return "dog";
+  // Any code below this line is never run
+  console.log("byebye");
+}
+myFun();
+
+var dog = {
+  "name": "Allie",
+  "legs": 4,
+  "tails": 1,
+  "enemies": ["Dumb People", "Gofers", "That $%^#&@ Neighbor Dog"],
+  "color":"Brown",
+  "weight": "90lbs",
+  "eyes": "hazzel",
+};
+
+var cat = {
+  "name": "lillie",
+  "legs": 4,
+  "tails": 1,
+  "enemies": ["dogs", "birds", "water"],
+  "color":"gray",
+  "weight": "5lbs",
+  "eyes": "brown",
+};
+											// END OF TEST//
+
+											// TEST FOR ACCESSING OBJECTS PROPERLY//
+
+JavaScript Timesies
+var dog = {
+  "name": "Miss.Allie",
+  "legs": 4,
+  "tails": 1,
+  "enemies": ["Water", "Cats", "That $%^#&@ Squirrel"]
+};
+
+
+var theName = dog.name;
+
+var numLegs = dog["legs"];
+
+var tailsProp = "tails";
+var numTails = dog[tailsProp];
+var numEnemies = dog.enemies[0]; 
+									
+									// ANOTHER TEST//
+
+
+var dog = {
+  "name": "Miss.Allie",
+  "legs": 4,
+  "tails": 1,
+  "enemies": ["Water", "Cats", "That $%^#&@ Squirrel"]
+};
+
+// Changing existing property values
+dog.name = "Lady Allie";
+// or 
+dog["name"] = "Lady Allie";
+
+// Add a new property and value
+dog.bark = "woof";
+// or 
+dog["bark"] = "woof";									
+
+
+// this is another test, we will be deleting //
+
+delete dog.bark;
+// end of test//
+
+ 
+
+
+var race = {
+  "1": "First",
+  "2": "Second",
+  "3": "Third",
+  "4": "Fourth",
+  "5": "Fifth"
+};
